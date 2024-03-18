@@ -1,5 +1,5 @@
 const elementoChute = document.querySelector('#chute')
-
+let numeroTentativas = 0;
 window.SpeechRecognition = window.SpeechRecongnition
  || webkitSpeechRecognition;
 
@@ -11,8 +11,17 @@ recognition.addEventListener('result', onSpeak)
 
 function onSpeak(event) {
     chute = event.results[0][0].transcript;
+    numeroTentativas++;
     exibeChuteNaTela(chute);
     verificaSeOChutePossuiValorValido(chute);
+    if(numeroTentativas == 1){
+        elementoChute.innerHTML += `
+        <div class="tentativas">Você deu <span class="numeroDeTentativas">${numeroTentativas}</span> chute nessa partida!</div>
+    `
+    }else{
+        elementoChute.innerHTML += `
+        <div class="tentativas">Você deu <span class="numeroDeTentativas">${numeroTentativas}</span> chutes nessa partida!</div>        `
+    }
 }
 
 function exibeChuteNaTela(chute) {
@@ -22,4 +31,6 @@ function exibeChuteNaTela(chute) {
     `;
 }
 
-recognition.addEventListener('end', () => recognition.start())
+recognition.addEventListener('end', () => {
+    recognition.start()
+})
