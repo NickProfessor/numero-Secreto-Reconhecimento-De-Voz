@@ -36,6 +36,9 @@ h3{
     font-size: 2em;
 }
 
+p{
+    font-size: 1.5em;
+}
 .mensagem{
     font-size: 1.5em;
     margin-top: 1em;
@@ -56,4 +59,26 @@ h3{
 
 .correto{
     color: rgb(111, 214, 111);
+}
+
+.btn-jogar{
+    padding: 1em;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.btn-jogar:hover{
+    background-color: #2f2e6d;
+    color: #aaa9c6;
+    cursor: pointer;
+}
+
+.btn-jogar:active{
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
 }
