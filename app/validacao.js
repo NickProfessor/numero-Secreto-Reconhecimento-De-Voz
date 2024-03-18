@@ -1,6 +1,6 @@
 function verificaSeOChutePossuiValorValido(chute){
     const numero = +chute;
-
+ debugger
     if (chuteForInvalido(numero)){
         elementoChute.innerHTML +=
         "<div class='invalido'>Valor invalido: Você precisa falar um número!</div>"
@@ -9,8 +9,8 @@ function verificaSeOChutePossuiValorValido(chute){
     }
 
     if(numeroForMaiorOuMenorQueOValorPermitido(numero)){
-        elementoChute.innerHTML +=`<div class='invalido'>Valor invalido: O numero secreto está entre
-        ${menorValor} e ${maiorValor}</div>`
+        elementoChute.innerHTML +=`
+        <div class='invalido'>Valor invalido: O numero secreto está entre ${menorValor} e ${maiorValor}</div>`
         document.querySelector('#instrucao').innerHTML = ""
         return;
     }

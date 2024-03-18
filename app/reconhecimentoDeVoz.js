@@ -10,8 +10,8 @@ recognition.start()
 recognition.addEventListener('result', onSpeak)
 
 function onSpeak(event) {
-    chute = event.results[0][0].transcript;
-    numeroTentativas++;
+    chute = parseInt(event.results[0][0].transcript);
+    numeroTentativas += 1;
     exibeChuteNaTela(chute);
     verificaSeOChutePossuiValorValido(chute);
     if(numeroTentativas == 1){
