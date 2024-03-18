@@ -15,6 +15,7 @@ body{
     font-family: var(--fonte-principal);
     background-color: var(--cor-de-fundo);
     color: var(--cor-principal);
+    margin: 0 30px;
 }
 
 .container{
