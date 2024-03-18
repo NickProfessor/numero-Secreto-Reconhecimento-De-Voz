@@ -48,3 +48,11 @@ h3{
     display: inline-block;
     margin: 20px;
 }
+
+.invalido{
+    color: rgb(240, 108, 108);
+}
+
+.correto{
+    color: rgb(111, 214, 111);
+}

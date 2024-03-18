@@ -11,4 +11,4 @@ function gerarNumeroSecreto() {
 elementoMenorValor.innerHTML = menorValor;
 elementoMaiorValor.innerHTML = maiorValor;
 
-console.log(gerarNumeroSecreto());
+console.log(numeroSecreto);
