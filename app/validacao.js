@@ -1,6 +1,5 @@
 function verificaSeOChutePossuiValorValido(chute){
     const numero = +chute;
- debugger
     if (chuteForInvalido(numero)){
         elementoChute.innerHTML +=
         "<div class='invalido'>Valor invalido: Você precisa falar um número!</div>"
